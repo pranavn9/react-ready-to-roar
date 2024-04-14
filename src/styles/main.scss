@@ -1,0 +1,39 @@
+@import 'variables';
+@import 'mixins';
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.light-theme {
+  @include theme($light-bg, $light-text);
+  .card {
+    padding: 0.5em;
+    border-radius: 1em;
+    @include theme($light-card-bg, $light-text);
+  }
+}
+
+.dark-theme {
+  @include theme($dark-bg, $dark-text);
+  .card {
+    padding: 0.5em;
+    border-radius: 1em;
+    @include theme($dark-card-bg, $dark-text);
+  }
+}

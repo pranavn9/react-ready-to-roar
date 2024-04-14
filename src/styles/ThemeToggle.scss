@@ -1,0 +1,70 @@
+input {
+  display: none;
+  &:checked + label {
+    background: #c0c0c0;
+
+    & .fa-sun {
+      transform: translateX(-18px);
+      opacity: 0;
+    }
+
+    & .fa-moon {
+      transform: translateX(-20px);
+      opacity: 1;
+    }
+
+    & .ball {
+      transform: translateX(22px);
+      background: #222;
+    }
+  }
+}
+
+.theme-toggle {
+  display: flex;
+  width: 36px;
+  height: 28px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6px;
+  background: #222;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+
+  & .ball {
+    position: absolute;
+    display: block;
+    width: 18px;
+    height: 18px;
+    top: 5px;
+    left: 4px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+
+  & i {
+    font-size: 18px;
+  }
+
+  & .fa-sun {
+    color: gold;
+    transition: 0.3s;
+    opacity: 1;
+    transform: translateX(20px);
+  }
+
+  & .fa-moon {
+    color: #fff;
+    transition: 0.3s;
+    opacity: 0;
+    margin-top: 2px;
+  }
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: flex-end;
+}

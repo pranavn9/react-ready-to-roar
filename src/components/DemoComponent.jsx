@@ -1,9 +1,9 @@
 import reactLogo from '../assets/images/react.svg';
-import styles from '../assets/styles/DemoComponent.module.scss';
+import '../styles/DemoComponent.scss';
 function DemoComponent() {
   return (
     <>
-      <img src={reactLogo} className={`${styles.logo} ${styles.react}`} alt="React logo" />
+      <img src={reactLogo} className="logo react" alt="React logo" />
     </>
   );
 }

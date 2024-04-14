@@ -1,0 +1,4 @@
+@mixin theme($bg, $text) {
+  background: $bg;
+  color: $text;
+}
